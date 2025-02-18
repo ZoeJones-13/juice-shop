@@ -9,9 +9,9 @@ jobs:
         - name: npm dependencies
           run: npm install     
 
-        - name: Run Snyk to check for vulnerabilities
+        - name: Run Snyk to check for vulnerabilities (SCA - third party)
           uses: snyk/actions/node@master
           with:
-            args: --severity-threshold=high || false
+            args: --severity-threshold=high
           env:
               SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
