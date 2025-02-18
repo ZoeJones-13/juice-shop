@@ -2,20 +2,6 @@ name: Snyk Scanning
 on: [push]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        # steps:
-        #     - uses: actions/checkout@v1
-        #     - name: Install Node
-        #       uses: actions/setup-node@v1
-        #       with:
-        #         node-version: 12.8
-        #     - name: npm dependencies
-        #       run: npm install     
-        #     - name: Checkout code
-        #       uses: actions/checkout@v2
-        #     - name: Run tests 
-        #       run: npm test
     security:
         runs-on: ubuntu-latest
         steps:
