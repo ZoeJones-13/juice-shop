@@ -1,9 +1,10 @@
-name: Node.js CI
-on:
-    push:
-        branches: [ feature ]
-    pull_request:
-        branches: [ feature ]
+name: Snyk Scanning 
+on: [push]
+# on:
+#     push:
+#         branches: [ feature ]
+#     pull_request:
+#         branches: [ feature ]
 jobs:
     build:
         runs-on: ubuntu-latest
