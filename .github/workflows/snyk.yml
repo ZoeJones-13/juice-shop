@@ -8,12 +8,14 @@ jobs:
         - uses: actions/checkout@master
         - name: npm dependencies
           run: npm install     
+
         - name: Run Snyk to check for vulnerabilities
-          uses: snyk/actions/node@master --severity-threshold=high || true
+          uses: snyk/actions/node@master
+          # Runs Snyk Code (SAST) analysis and uploads result into GitHub.
+        # Use || true to not fail the pipeline
+        - name: Snyk Code test
+          run: snyk code test --severity-threshold=high || true 
           env:
               SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-#
-#
-#
-#
 
+              
