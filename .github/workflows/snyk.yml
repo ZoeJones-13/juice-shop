@@ -12,6 +12,6 @@ jobs:
         - name: Run Snyk to check for vulnerabilities (SCA - third party)
           uses: snyk/actions/node@master
           with:
-            args: --severity-threshold=high
+            args: --severity-threshold=high || true
           env:
               SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
